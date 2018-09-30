@@ -43,7 +43,7 @@ VertexColorProgram::VertexColorProgram() {
 		"		float nl = max(0.0, dot(n,l));\n"
 		"		total_light += nl * sun_color;\n"
 		"	}\n"
-		"	fragColor = vec4(color.rgb * total_light, color.a);\n"
+		"	fragColor = vec4(color.rgb * total_light * 0.2, color.a);\n"
 		"}\n"
 	);
 

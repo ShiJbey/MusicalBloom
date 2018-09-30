@@ -5,7 +5,7 @@
 #include "Load.hpp"
 
 //The 'GameMode' mode plays the game:
-#include "GameMode.hpp"
+#include "MusicalBloomMode.hpp"
 
 //The 'Sound' header has functions for managing sound:
 #include "Sound.hpp"
@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
 #endif
 	struct {
 		//TODO: this is where you set the title and size of your game window
-		std::string title = "TODO: Game Title";
+		std::string title = "Musical Bloom";
 		glm::uvec2 size = glm::uvec2(640, 400);
 	} config;
 
@@ -118,7 +118,7 @@ int main(int argc, char **argv) {
 
 	//------------ create game mode + make current --------------
 
-	Mode::set_current(std::make_shared< GameMode >(/*client*/));
+	Mode::set_current(std::make_shared< MusicalBloom::MusicalBloomMode >(/*client*/));
 
 	//------------ main loop ------------
 

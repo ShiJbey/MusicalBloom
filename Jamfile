@@ -74,12 +74,14 @@ CLIENT_NAMES =
 	depth_program
 	Scene
 	Mode
-	GameMode
 	MenuMode
 	Load
 	MeshBuffer
 	draw_text
 	Sound
+	MusicalBloomGame
+	MusicalBloomMode
+	highlight_test_program
 	;
 
 if $(OS) = NT {

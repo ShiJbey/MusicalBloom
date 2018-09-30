@@ -1,11 +1,10 @@
 # Game Information
-(Note: fill in this portion with information about your game.)
 
-Title: (TODO: your game's title)
+Title: Musical Bloom
 
-Author: (TODO: your name)
+Author: Shi Johnson-Bey
 
-Design Document: [TODO: name of design document](TODO: link to design document)
+Design Document: [Musical Bloom](http://graphics.cs.cmu.edu/courses/15-466-f18/game3-designs/ishmaelj/)
 
 Screen Shot:
 
@@ -13,7 +12,7 @@ Screen Shot:
 
 How To Play:
 
-TODO: describe the controls and (if needed) goals/strategy.
+
 
 Changes From The Design Document:
 
