@@ -80,22 +80,10 @@ Before you dive into the code, it helps to understand the overall structure of t
 The ```meshes/export-meshes.py``` script can write mesh data including a variety of attributes (e.g., *p*ositions, *n*ormals, *c*olors, *t*excoords) from a selected layer of a blend file:
 
 ```
-blender --background --python meshes/export-meshes.py -- meshes/crates.blend:1 dist/crates.pnc
+blender --background --python meshes/export-meshes.py -- meshes/musical_bloom.blend:1 dist/musical_bloom.pnc
 ```
 
-The ```meshes/export-scene.py``` script can write the transformation hierarchy of the scene from a selected layer of a blend file, and includes references to meshes (by name):
-
-```
-blender --background --python meshes/export-scene.py -- meshes/crates.blend:1 dist/crates.scene
-```
-
-The ```meshes/export-walkmeshes.py``` script can writes vertices, normals, and triangle indicies of all meshes on a selected layer of a .blend file:
-
-```
-blender --background --python meshes/export-walkmeshes.py -- meshes/crates.blend:3 dist/crates.walkmesh
-```
-
-There is a Makefile in the ```meshes``` directory with some example commands of this sort in it as well.
+Windows users can run ```export.bat``` to call the command above.
 
 ## Runtime Build Instructions
 
