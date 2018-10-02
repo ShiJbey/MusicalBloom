@@ -27,6 +27,8 @@ Good / Bad / Ugly Code:
 Overall, I think this is probably the cleanest game code that I've submitted. The way I swap the shader programs
 could probably be cleaner. I think I may have done some extra work that wasnt necessary.
 
+Unfortunatly, I didnt get the bloom working since, I didn't understand OpenGL well enough until this morning.
+
 # Changes In This Base Code
 
 I've changed the main executable name back to 'main' and disabled building the server. However, ```Connection.*pp``` is still around if you decide to do some networking.
