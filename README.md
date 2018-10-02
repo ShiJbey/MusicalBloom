@@ -12,15 +12,20 @@ Screen Shot:
 
 How To Play:
 
-
+When the game starts, four cubes will appear on the screen. After a brief moment, the game will start
+a new sequence of sounds. Memorize the sequence and then type it back to the game. Each of the cubes,
+moving left to right are mapped to the keys 1, 2, 3, 4 respectively. If your pattern is correct, then
+the game will add an additional sound to the end of the previous sequence. If not, then it will
+automatically start back at one sound.
 
 Changes From The Design Document:
 
-TODO: what did you need to add/remove/modify from the original design? Why?
+I did not make any changes from the original design document
 
 Good / Bad / Ugly Code:
 
-TODO: provide examples of code you wrote from this project that you think is good (elegant, simple, useful), bad (hack-y, brittle, unreadable), and ugly (particularly inelegant). Provide a sentence or two of justification for the examples.
+Overall, I think this is probably the cleanest game code that I've submitted. The way I swap the shader programs
+could probably be cleaner. I think I may have done some extra work that wasnt necessary.
 
 # Changes In This Base Code
 

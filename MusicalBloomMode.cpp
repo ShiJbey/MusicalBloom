@@ -110,12 +110,21 @@ MusicalBloom::MusicalBloomMode::MusicalBloomMode() {
 
     Scene::Transform *transform_4 = scene.new_transform();
     transform_4->position = glm::vec3(4.5f, 0.0f, 0.0f);
-    game.cubes[3].object =attach_object(transform_4, "YellowCube");
+    game.cubes[3].object = attach_object(transform_4, "YellowCube");
     game.cubes[3].object->transform->name = "YellowCube";
+
+    Scene::Transform *transform_5 = scene.new_transform();
+    transform_5->name = "Floor";
+    transform_5->scale = glm::vec3(10.0f, 1.0f, 10.0f);
+    transform_5->position.y -= 3.0f;
+    transform_5->position.z += 2.0f;
+    attach_object(transform_5, "Floor");
 
     Scene::Transform *camera_transform = scene.new_transform();
     camera_transform->position = glm::vec3(0.0f, 0.0f, 20.0f);
+    camera_transform->position.y += 6.0f;
     camera_transform->rotation *= glm::angleAxis((float)M_PI, glm::vec3(0.0f, 0.0f, 1.0f));
+    camera_transform->rotation *= glm::angleAxis(glm::radians(-15.0f), glm::vec3(1.0f, 0.0f, 0.0f));
     camera = scene.new_camera(camera_transform);
 
     if (!game.is_valid())
@@ -152,12 +161,6 @@ void MusicalBloom::MusicalBloomMode::reset_all_cubes()
     for (uint32_t cube_index = 0; cube_index < game.cubes.size(); cube_index++)
     {
         reset_cube(cube_index);
-        // Set the cubes shader back to being the dimmer shader
-        //Scene::Object *cube_object = game.cubes[cube_index].object;
-        //cube_object->programs[Scene::Object::ProgramTypeDefault] = vertex_color_program_info;    
-        //MeshBuffer::Mesh const &mesh = musical_bloom_meshes->lookup(cube_object->transform->name);
-        //cube_object->programs[Scene::Object::ProgramTypeDefault].start = mesh.start;
-        //cube_object->programs[Scene::Object::ProgramTypeDefault].count = mesh.count;
     }
 };
 
@@ -321,7 +324,7 @@ void MusicalBloom::MusicalBloomMode::update(float elapsed)
 
 void MusicalBloom::MusicalBloomMode::draw(glm::uvec2 const &drawable_size)
 {
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
