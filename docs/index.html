@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- NOTE: the string 'TODO' appears everywhere you need to fill in information. -->
+<html>
+<head>
+<title>Musical Bloom</title>
+<!-- NOTE: this CSS sets up the ".figure" class to center images, and instructs images in ".figure"s to have space around them and to render crisp pixel edges when scaled [e.g. for retina displays]. -->
+<style>
+body {
+	background:#fff;
+	color:#000;
+	margin:0;
+	padding:0;
+}
+.figure {
+	text-align:center;
+}
+.figure > img {
+	margin: 0px 20px;
+	image-rendering: pixelated;
+}
+h1 {
+	margin:0;
+	padding: 5px 5px 0 5px;
+	background:#ddd;
+}
+#author {
+	margin:0;
+	padding: 0 10px 0 30px;
+	border-bottom: 3px solid #ccc;
+	background:#ddd;
+}
+h2 {
+	margin:1em 0;
+	padding: 5px 5px 5px 0;
+	background:#ddd;
+	border-bottom: 3px solid #ccc;
+}
+h1, #author, h2 {
+	background: linear-gradient(to right,
+		#dddddd   0%, #dddddd  75%,
+		#dce8d2  75%, #d2e8e1  80%,
+		#d2e8e1  80%, #d2e8e1  85%,
+		#d2e2e8  85%, #d2e2e8  90%,
+		#d7d2e8  90%, #d7d2e8  95%,
+		#e8d2e8  95%, #e8d2e8 100%);
+}
+p {
+	margin: 1em;
+}
+</style>
+</head>
+<body>
+<h1>Musical Bloom</h1>
+<div id="author">by: Shi Johnson-Bey (ishmaelj)</div>
+<p>A clone of the simple simon game, but cubes will play sounds and "illuminate" using a <a href="https://en.wikipedia.org/wiki/Bloom_(shader_effect)">bloom shader</a>.</p>
+<!-- the <div> wrapping this image centers it on the page. -->
+<!-- TODO: drawing showing the main view of the game during play -->
+<div class="figure">
+<img src="game.jpg" width="400px" height="400px"/>
+</div>
+<p>Players have to copy the sequence of cube illuminations previously played by the computer. If they, get it
+	right, then the sequence is expanded by one value. If not then game over.
+</p>
+
+<h2>Gameplay</h2>
+<p>Keyboard keys are mapped to the different cubes pictured on the screen. After the game plays a sequence of sounds,
+	the player repeats the pattern back by pressing the keys that correspond to the correct cubes. This process repeats until
+	the player loses.
+</p>
+<!-- TODO: illustrate your descriptions with more drawings -->
+
+
+<h2>Assets</h2>
+<p>No assets provided since models are simple geometric meshes.</p>
+
+</body>
+</html>
